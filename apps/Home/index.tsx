@@ -1,12 +1,19 @@
+import Head from 'next/head';
+
 import AnalysisDraw from '@components/draw/Analysis';
 import FunDraw from '@components/draw/Fun';
 import Aircraft from '@components/draw/Aircraft';
 
 import TopCover from "./TopCover";
 import Pricing from "./Pricing";
+import Contact from './Contact';
 
 const Home = () => (
   <>
+    <Head>
+      <title>JustSuperb - The Best Chinese naming service.</title>
+      <meta name="description" content=" We are the best Chinese naming service. We handcraft superb Chinese names for you."></meta>
+    </Head>
     <div className="root">
       <div className="content mx-auto">
         <TopCover />
@@ -66,19 +73,24 @@ const Home = () => (
         </section>
 
         <Pricing />
+
+        <Contact />
+
+        <div className="copyright flex justify-center">
+          Copyright © {(new Date()).getFullYear()} JustSuperb. All Rights Reserved.
+        </div>
       </div>
       <style jsx>{`
         .root {
           background: var(--bg-color);
           color: var(--text-color);
-          padding: 0 20px 1000px 20px;
+          padding: 0 20px 0 20px;
         }
         .content {
           max-width: 1440px;
         }
         section {
-          padding: 100px 0 250px 0;
-          min-height: 100vh;
+          padding: 100px 0 200px 0;
         }
         h2 {
           font-size: 70px;
@@ -110,6 +122,10 @@ const Home = () => (
           max-width: 600px;
           padding: 50px 30px 0 0;
         }
+        .copyright {
+          font-size: 12px;
+          padding: 10px 0;
+        }
         @media (max-width: 1440px) {
           h2 {
             font-size: 50px;
@@ -124,6 +140,14 @@ const Home = () => (
           }
           .text {
             font-size: 18px;
+          }
+          .draw {
+            display: flex;
+            justify-content: center;
+            padding: 30px;
+          }
+          section {
+            padding: 50px 0 100px 0;
           }
         }
         @media (max-width: 365px) {

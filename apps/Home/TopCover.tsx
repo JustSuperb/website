@@ -16,7 +16,9 @@ const TopCover = () => (
         Chinese name?
       </h1>
       <p className="text fw-300">
-        We handcraft superb <br className="br3" /> and fully customized Chinese
+        We provide the best Chinese naming service.
+        <br />
+        We handcraft superb and fully customized Chinese
         names for you.
       </p>
       <div className="btn flex">
@@ -63,7 +65,7 @@ const TopCover = () => (
             font-size: 70px;
           }
           .text {
-            font-size: 24px;
+            font-size: 18px;
           }
           .draw {
             max-width: 400px;
@@ -72,9 +74,6 @@ const TopCover = () => (
         @media (max-width: 900px) {
           h1 {
             font-size: 50px;
-          }
-          .br3 {
-            display: block;
           }
         }
         @media (max-width: 767px) {

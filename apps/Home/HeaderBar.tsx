@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Link from 'next/link';
 
 import Button from "@components/Button";
 import urls from "@constants/urls";
@@ -21,8 +22,14 @@ const HeaderBar = () => {
   return (
     <header className={`flex items-center ${down ? "down" : ""}`}>
       <div className="content mx-auto flex justify-between items-center">
-        <div>Just Superb</div>
+        <Link href="/">
+          <a className="home-link">JustSuperb</a>
+        </Link>
         <nav className="flex items-center">
+          <div className="contact">
+            <Button href="/#contact" type="text">Contact us</Button>
+          </div>
+          <div className="divide"></div>
           <Button href="/#pricing" type="text">Pricing</Button>
           <div className="divide"></div>
           <Button href={urls.startNow}>Start Now</Button>
@@ -37,6 +44,11 @@ const HeaderBar = () => {
           height: 64px;
           transition: 0.2s;
         }
+        .home-link {
+          display: block;
+          font-weight: 700;
+          color: var(--primary-color);
+        }
         .down {
           background: #fefefe;
           box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
@@ -48,6 +60,11 @@ const HeaderBar = () => {
         }
         .divide {
           width: 16px;
+        }
+        @media(max-width: 500px) {
+          .contact {
+            display: none;
+          }
         }
         @media(max-width: 375px) {
           .divide {
