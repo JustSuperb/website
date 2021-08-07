@@ -31,6 +31,7 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+          <script src="https://cmp.osano.com/16CVviSfPZBHq42xz/fb793d75-cde1-4054-b45e-a64c322a1741/osano.js"></script>
           <GATrackingCode />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

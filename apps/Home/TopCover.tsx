@@ -2,33 +2,30 @@ import Button from "@components/Button";
 import BalloonsDraw from '@components/draw/Balloons';
 import urls from '@constants/urls';
 
-import HeaderBar from "./HeaderBar";
 
 const TopCover = () => (
-  <>
-    <HeaderBar />
-    <div className="root">
-      <h1 className="fw-500">
-        Need a
-        <br />
-        <span className="superb"> Superb </span>
-        <br className="br2" />
-        Chinese name?
-      </h1>
-      <p className="text fw-300">
-        We provide the best Chinese naming service.
-        <br />
-        We handcraft superb and fully customized Chinese
-        names for you.
-      </p>
-      <div className="btn flex">
-        <Button href={urls.startNow} size="large">Start Now</Button>
-      </div>
+  <div className="root">
+    <h1 className="fw-500">
+      Need a
+      <br />
+      <span className="superb"> Superb </span>
+      <br className="br2" />
+      Chinese name?
+    </h1>
+    <p className="text fw-300">
+      We provide the best Chinese naming service.
+      <br />
+      We handcraft superb and fully customized Chinese
+      names for you.
+    </p>
+    <div className="btn flex">
+      <Button href={urls.startNow} size="large">Start Now</Button>
+    </div>
 
-      <div className="draw">
-        <BalloonsDraw />
-      </div>
-      <style jsx>{`
+    <div className="draw">
+      <BalloonsDraw />
+    </div>
+    <style jsx>{`
         .root {
           min-height: 100vh;
           padding: 150px 0 100px 50px;
@@ -99,8 +96,7 @@ const TopCover = () => (
           }
         }
       `}</style>
-    </div>
-  </>
+  </div>
 );
 
 export default TopCover;

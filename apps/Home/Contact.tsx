@@ -6,7 +6,7 @@ const Pricing = () => (
     <div className="root">
         <h2 id="contact">Any question?</h2>
         <p className="subtitle fw-300">
-            Do you have any questions about our naming service? 
+            Do you have any questions about our naming service?
             <br />
             Please feel free to contact us at <a className="email" href="mailto:justsuperbname@gmail.com">justsuperbname@gmail.com</a>
         </p>
@@ -34,6 +34,11 @@ const Pricing = () => (
       @media(max-width: 767px) {
         h2 {
           font-size: 50px;
+        }
+      }
+      @media(max-width: 375px) {
+        .subtitle {
+            font-size: 18px;
         }
       }
     `}</style>

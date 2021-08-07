@@ -9,7 +9,6 @@ const HeaderBar = () => {
 
   useEffect(() => {
     const handleScroll = (e) => {
-      console.log(window.pageYOffset);
       if (window.pageYOffset < 50) setDown(false);
       else setDown(true);
     };
