@@ -33,9 +33,9 @@ a {
   --header-height: 50px;
 
   --primary-color: #ab47bc;
-  --text-color: #1b1b1b;
+  --text-color: #212121;
   --text-color-light: #757575;
-  --bg-color: #fefefe;
+  --bg-color: #fafafa;
 }
 
 /* functional css */

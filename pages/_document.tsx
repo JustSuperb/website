@@ -29,7 +29,7 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html>
+      <Html lang="en">
         <Head>
           <GATrackingCode />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
