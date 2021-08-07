@@ -1,4 +1,5 @@
 import Button from "@components/Button";
+import BalloonsDraw from '@components/draw/Balloons';
 import urls from '@constants/urls';
 
 import HeaderBar from "./HeaderBar";
@@ -9,7 +10,7 @@ const TopCover = () => (
     <div className="root">
       <h1 className="fw-500">
         Need a
-        <br className="br1" />
+        <br />
         <span className="superb"> Superb </span>
         <br className="br2" />
         Chinese name?
@@ -19,12 +20,16 @@ const TopCover = () => (
         names for you.
       </p>
       <div className="btn flex">
-        <Button href={urls.startNow}>Start Now</Button>
+        <Button href={urls.startNow} size="large">Start Now</Button>
+      </div>
+
+      <div className="draw">
+        <BalloonsDraw />
       </div>
       <style jsx>{`
         .root {
           min-height: 100vh;
-          padding: 250px 0 0 50px;
+          padding: 150px 0 100px 50px;
         }
         h1 {
           font-size: 90px;
@@ -40,12 +45,14 @@ const TopCover = () => (
         .br1, .br2, .br3 {
           display: none;
         }
+        .draw {
+          max-width: 500px;
+          margin-left: auto;
+          margin-right: 30px;
+        }
         @media (max-width: 1440px) {
           h1 {
             font-size: 80px;
-          }
-          .br1 {
-            display: block;
           }
           .text {
             font-size: 32px;
@@ -58,6 +65,9 @@ const TopCover = () => (
           .text {
             font-size: 24px;
           }
+          .draw {
+            max-width: 400px;
+          }
         }
         @media (max-width: 900px) {
           h1 {
@@ -69,7 +79,7 @@ const TopCover = () => (
         }
         @media (max-width: 767px) {
           .root {
-            padding: 200px 0 0 20px;
+            padding: 200px 0 100px 20px;
           }
           .br2 {
             display: block;
@@ -78,6 +88,15 @@ const TopCover = () => (
         @media (max-width: 540px) {
           h1 {
             font-size: 40px;
+          }
+          .draw {
+            padding-top: 20px;
+            max-width: 300px;
+          }
+        }
+        @media(max-height: 700px) {
+          .root {
+            padding: 100px 0 100px 20px;
           }
         }
       `}</style>

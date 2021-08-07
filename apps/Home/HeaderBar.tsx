@@ -23,9 +23,8 @@ const HeaderBar = () => {
       <div className="content mx-auto flex justify-between items-center">
         <div>Just Superb</div>
         <nav className="flex items-center">
-          <a className="link" href="/#pricing">
-            Pricing
-          </a>
+          <Button href="/#pricing" type="text">Pricing</Button>
+          <div className="divide"></div>
           <Button href={urls.startNow}>Start Now</Button>
         </nav>
       </div>
@@ -47,16 +46,13 @@ const HeaderBar = () => {
           max-width: 1440px;
           padding: 0 20px;
         }
-        .link {
-          display: block;
-          padding: 12px 16px;
-          cursor: pointer;
-          margin-right: 20px;
-          border-radius: 4px;
-          transition: 0.2s;
+        .divide {
+          width: 16px;
         }
-        .link:hover {
-          box-shadow: rgb(0 0 0 / 16%) 0px 3px 6px, rgb(0 0 0 / 23%) 0px 3px 6px;
+        @media(max-width: 375px) {
+          .divide {
+            width: 12px;
+          }
         }
       `}</style>
     </header>
