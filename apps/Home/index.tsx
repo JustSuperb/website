@@ -1,22 +1,39 @@
-import Head from 'next/head';
+import Head from "next/head";
 
-import Layout from '@components/Layout';
-import AnalysisDraw from '@components/draw/Analysis';
-import FunDraw from '@components/draw/Fun';
-import Aircraft from '@components/draw/Aircraft';
+import Layout from "@components/Layout";
+import AnalysisDraw from "@components/draw/Analysis";
+import FunDraw from "@components/draw/Fun";
+import Aircraft from "@components/draw/Aircraft";
+import BalloonsDraw from "@components/draw/Balloons";
 
-import TopCover from "./TopCover";
 import Pricing from "./Pricing";
-import Contact from './Contact';
+import Contact from "./Contact";
 
 const Home = () => (
   <>
     <Head>
       <title>JustSuperb - The Best Chinese naming service.</title>
-      <meta name="description" content=" We are the best Chinese naming service. We handcraft superb Chinese names for you."></meta>
+      <meta
+        name="description"
+        content=" We are the best Chinese naming service. We handcraft superb Chinese names for you."
+      ></meta>
     </Head>
     <Layout>
-      <TopCover />
+      <section className="pt-20">
+        <h1 className="text-3xl font-bold ml-3 sm:text-4xl">
+          Need a
+          <br />
+          <span className="text-purple-600"> Superb </span>
+          Chinese name?
+        </h1>
+        <p className="text-md mt-4 ml-3 text-gray-700">
+          We handcraft superb and fully customized Chinese names for you.
+        </p>
+
+        <div className="max-w-xs">
+          <BalloonsDraw />
+        </div>
+      </section>
 
       <section>
         <h2>

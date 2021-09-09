@@ -1,56 +1,27 @@
-import { FC } from 'react';
-import clsx from 'clsx';
+import { FC } from "react";
+import clsx from "clsx";
 
 type Props = {
-  href: string;
-  type?: "filled" | "text";
-  size?: "large";
-}
+  className?: string;
+  href?: string;
+  component?: "a";
+  variant?: "text";
+};
 
-const Button: FC<Props> = ({ children, type: originType, size, ...restProps }) => {
-  const type = originType || "filled";
+const Button: FC<Props> = ({ children, className, component, variant, ...restProps }) => {
+  const Component = component || "button";
+
   return (
-    <a className={clsx({
-      text: type === "text",
-      filled: type === "filled",
-      large: size === "large"
-    })} {...restProps}>
+    <Component
+      className={clsx(
+        "block py-2 px-4 text-sm rounded-md font-medium transition",
+        variant === "text" ? "text-primary-700 hover:bg-primary-100" : "bg-primary-600 text-white hover:opacity-75",
+        className
+      )}
+      {...restProps}
+    >
       {children}
-      <style jsx>{`
-      a {
-        display: block;
-        padding: 12px 16px;
-        border-radius: 4px;
-        cursor: pointer;
-        transition: 0.2s;
-      }
-      a:hover {
-        box-shadow: rgb(0 0 0 / 16%) 0px 3px 6px, rgb(0 0 0 / 23%) 0px 3px 6px;
-      }
-      .filled {
-        background: var(--primary-color);
-        color: #fff;
-      }
-      .text {
-        color: inherit;
-      }
-      .large {
-        font-size: 24px;
-        padding: 12px 20px;
-      }
-      @media(max-width: 375px) {
-        a {
-          font-size: 14px;
-          padding: 8px 12px;
-        }
-        .large {
-          font-size: 18px;
-          padding: 12px 16px;
-        }
-      }
- 
-    `}</style>
-    </a>
+    </Component>
   );
-}
+};
 export default Button;
