@@ -1,80 +1,63 @@
-import CheckIcon from '@components/CheckIcon';
-import Button from '@components/Button';
-import urls from '@constants/urls';
+import Link from "next/link";
+
+import Button from "@components/Button";
+import urls from "@constants/urls";
+
+const CheckIcon = () => (
+  <div className="w-7 h-7 bg-green-200 rounded-full flex justify-center items-center">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className="h-6 w-6 text-green-600"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="M5 13l4 4L19 7"
+      />
+    </svg>
+  </div>
+);
+
+const features = [
+  "2 Name suggestions",
+  "Fully customized naming report",
+  "Pronunciation and writing tutorial",
+  "Results in 48 hours",
+  "Both Simplified & Traditional Chinese",
+];
 
 const Pricing = () => (
-  <div className="root">
-    <h2 id="pricing">Pricing</h2>
-    <p className="subtitle fw-300">One price. Fully customized.</p>
+  <section className="pb-60">
+    <h2 id="pricing" className="pt-24 text-4xl text-center md:pt-40">
+      Pricing
+    </h2>
+    <p className="mt-4 mb-8 text-2xl text-center text-gray-400">
+      One price. Fully customized.
+    </p>
 
-    <div className="card">
-      <div className="price">
-        ${" "}
-        <span className="number">59</span>{" "}
-        USD
-      </div>
-      <div className="item"><div className="check"><CheckIcon /></div>2 Name suggestions.</div>
-      <div className="item"><div className="check"><CheckIcon /></div>Fully customized naming report.</div>
-      <div className="item"><div className="check"><CheckIcon /></div>Pronunciation and writing tutorial.</div>
-      <div className="item"><div className="check"><CheckIcon /></div>Results in 48 hours.</div>
-      <div className="item"><div className="check"><CheckIcon /></div>Both Simplified Chinese and Traditional Chinese.</div>
+    <div className="flex justify-center">
+      <div className="rounded-lg shadow-xl border-t-8 py-5 px-4 border-primary-600 sm:px-6 sm:py-8">
+        <div className="text-center text-lg">
+          $ <span className="text-5xl">69</span> USD
+        </div>
 
-      <div className="btn flex justify-center">
-        <Button href={urls.startNow}>Start Now</Button>
+        {features.map((item, i) => (
+          <div className="mt-6 text-lg flex">
+            <CheckIcon />
+            <span className="pl-2">{item}</span>
+          </div>
+        ))}
+
+          <Button className="mx-auto mt-9 mb-3 text-xl" href={urls.startNow}>
+            Start Now
+          </Button>
       </div>
     </div>
-
-    <style jsx>{`
-      .root {
-        padding-bottom: 200px;
-      }
-      h2 {
-        font-size: 80px;
-        text-align: center;
-        padding-top: 100px
-      }
-      .subtitle {
-        text-align: center;
-        font-size: 24px;
-        color: var(--text-color-light);
-        padding-top: 10px;
-      }
-      .card {
-        max-width: 530px;
-        font-size: 24px;
-        padding: 30px 20px;
-        margin: 50px auto 0 auto;
-        box-shadow: 2px 2px 12px -3px rgb(0 0 0 / 20%);
-      }
-      .price {
-        text-align: center;
-      }
-      .number {
-        font-size: 60px;
-      }
-      .item {
-        font-size: 21px;
-        font-weight: 300;
-        display: flex;
-        align-items: flex-start;
-        margin: 15px 0;
-      }
-      .check {
-        padding: 0 4px 0 0;
-      }
-      .btn {
-        margin-top: 20px;
-      }
-      @media(max-width: 767px) {
-        h2 {
-          font-size: 50px;
-        }
-        .item {
-          font-size: 18px;
-        }
-      }
-    `}</style>
-  </div>
+  </section>
 );
 
 export default Pricing;

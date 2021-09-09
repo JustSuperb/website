@@ -47,7 +47,7 @@ const CookiePolicy = () => (
                 padding: 0 20px 200px 20px;
             }
             h1 {
-                padding: 200px 0 30px 0;
+                padding: 100px 0 30px 0;
                 text-align: center;
                 font-size: 40px;
             }

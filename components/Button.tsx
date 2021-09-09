@@ -14,7 +14,7 @@ const Button: FC<Props> = ({ children, className, component, variant, ...restPro
   return (
     <Component
       className={clsx(
-        "block py-2 px-4 text-sm rounded-md font-medium transition",
+        "block py-2 px-4 text-sm rounded-md font-normal transition",
         variant === "text" ? "text-primary-700 hover:bg-primary-100" : "bg-primary-600 text-white hover:opacity-75",
         className
       )}
