@@ -20,20 +20,12 @@ const HeaderBar = () => {
   }, []);
 
   return (
-    <div className={clsx("fixed w-full bg-white px-3 transition", down && "shadow-md")}>
+    <div className={clsx("z-20 fixed w-full bg-white px-3 transition", down && "shadow-md")}>
       <div className="max-w-screen-xl mx-auto py-3 flex justify-between items-center">
         <Link href="/">
           <a className="block text-primary-600 font-bold p-2 text-sm sm:text-base">JustSuperb</a>
         </Link>
         <nav className="flex">
-          <Button
-            className="hidden sm:block"
-            href="/#contact"
-            variant="text"
-            component="a"
-          >
-            Contact us
-          </Button>
           <Button
             className="mr-4"
             href="/#pricing"

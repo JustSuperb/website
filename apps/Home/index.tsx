@@ -11,7 +11,7 @@ import urls from "@constants/urls";
 
 import Section from "./Section";
 import Pricing from "./Pricing";
-import Contact from "./Contact";
+import HeroSection from "./HeroSection";
 
 const Home = () => (
   <>
@@ -23,31 +23,7 @@ const Home = () => (
       ></meta>
     </Head>
     <Layout>
-      <section className="pt-20 lg:flex">
-        <div className="pl-4 lg:pt-20 md:pl-20">
-          <h1 className="text-3xl font-bold sm:text-4xl">
-            Need a
-            <br className="lg:hidden" />
-            <span className="text-primary-600"> Superb </span>
-            Chinese name?
-          </h1>
-          <p className="text-2xl mt-5 text-gray-500">
-            We handcraft superb Chinese names for you.
-          </p>
-
-          <Button
-            component="a"
-            className="inline-block mt-8 text-lg"
-            href={urls.startNow}
-          >
-            Get Started
-          </Button>
-        </div>
-
-        <div className="w-44 mx-auto mt-20 md:w-full max-w-xs lg:mt-10">
-          <BalloonsDraw />
-        </div>
-      </section>
+      <HeroSection />
 
       <Section
         title={
@@ -115,7 +91,6 @@ const Home = () => (
       />
 
       <Pricing />
-
     </Layout>
   </>
 );
