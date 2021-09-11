@@ -24,15 +24,17 @@ const CheckIcon = () => (
 
 const features = [
   "2 Name suggestions",
-  "Fully customized naming report",
+  "Fully customized",
+  "Detailed documentation",
   "Pronunciation and writing tutorial",
-  "Results in 48 hours",
   "Both Simplified & Traditional Chinese",
+  "Uniqueness Check",
+  "Results in 48 hours",
 ];
 
 const Pricing = () => (
   <section className="pb-60">
-    <h2 id="pricing" className="pt-24 text-4xl text-center md:pt-40">
+    <h2 id="pricing" className="pt-24 font-bold text-4xl text-center md:pt-40">
       Pricing
     </h2>
     <p className="mt-4 mb-8 text-2xl text-center text-gray-400">

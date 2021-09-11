@@ -33,6 +33,7 @@ const HeroSection = () => (
                 Get started
               </Button>
 
+              {/*
               <Button
                 variant="text"
                 className="bg-primary-100 hover:bg-primary-200 px-8 py-3 text-lg font-medium md:text-lg md:px-10"
@@ -41,6 +42,7 @@ const HeroSection = () => (
               >
                 Why choose us?
               </Button>
+              */}
             </div>
           </div>
         </main>
