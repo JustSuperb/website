@@ -1,17 +1,13 @@
 import Head from "next/head";
-import Link from "next/link";
 
 import Layout from "@components/Layout";
-import AnalysisDraw from "@components/draw/Analysis";
 import FunDraw from "@components/draw/Fun";
 import Aircraft from "@components/draw/Aircraft";
-import BalloonsDraw from "@components/draw/Balloons";
-import Button from "@components/Button";
-import urls from "@constants/urls";
 
 import Section from "./Section";
 import Pricing from "./Pricing";
 import HeroSection from "./HeroSection";
+import WhyNeedUsSection from "./WhyNeedUsSection";
 
 const Home = () => (
   <>
@@ -25,27 +21,7 @@ const Home = () => (
     <Layout>
       <HeroSection />
 
-      <Section
-        title={
-          <>
-            Naming a good Chinese name is{" "}
-            <span className="text-red-600">hard</span>.
-          </>
-        }
-        content={
-          <>
-            There are <span className="font-medium">6000+ characters</span> in
-            Mandarin Chinese. Most of the characters have more than one meaning.
-            <br />
-            This is why{" "}
-            <span className="font-medium">
-              even native Chinese speakers will seek help from professional
-              Chinese naming services.
-            </span>
-          </>
-        }
-        img={<AnalysisDraw />}
-      />
+      <WhyNeedUsSection />
 
       <Section
         title={
