@@ -22,7 +22,7 @@ const Pay = () => {
               purchase_units: [
                 {
                   description: "Chinese Naming Service",
-                  amount: { currency_code: "USD", value: 69 },
+                  amount: { currency_code: "USD", value: 10 },
                 },
               ],
             });
