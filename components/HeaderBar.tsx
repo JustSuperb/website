@@ -22,7 +22,7 @@ const HeaderBar = () => {
   return (
     <div className={clsx("z-20 fixed w-full bg-white px-3 transition", down && "shadow-md")}>
       <div className="max-w-screen-xl mx-auto py-3 flex justify-between items-center">
-        <Link href="/">
+        <Link href={urls.home}>
           <a className="block text-primary-600 font-bold p-2 text-sm sm:text-base">JustSuperb</a>
         </Link>
         <nav className="flex">
