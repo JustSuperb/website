@@ -24,7 +24,7 @@ const CheckIcon = () => (
 );
 
 const features = [
-  "2 Name suggestions",
+  "1 Name suggestions",
   "Fully customized",
   "Detailed documentation",
   "Pronunciation and writing tutorial",
