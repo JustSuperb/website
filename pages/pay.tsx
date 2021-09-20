@@ -3,6 +3,7 @@ import Link from "next/link";
 import Script from "next/script";
 
 import urls from "@constants/urls";
+import price from '@constants/price';
 import Layout from "@components/Layout";
 import Button from "@components/Button";
 
@@ -28,7 +29,7 @@ const Pay = () => {
               purchase_units: [
                 {
                   description: "Chinese Naming Service",
-                  amount: { currency_code: "USD", value: 69 },
+                  amount: { currency_code: "USD", value: price },
                 },
               ],
             });
@@ -99,7 +100,7 @@ const Pay = () => {
             </p>
 
             <div className="text-center mt-12 mb-6">
-              Total <span className="text-4xl">$69</span> USD
+              Total <span className="text-4xl">${price}</span> USD
             </div>
           </div>
         )}
